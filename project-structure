@@ -1,0 +1,11 @@
+eagle-construction/
+├── index.html (your existing file)
+├── styles.css
+├── js/
+│   └── main.js
+├── images/
+│   ├── hero-bg.jpg
+│   ├── portfolio/
+│   └── team/
+└── assets/
+    └── favicon.ico 
