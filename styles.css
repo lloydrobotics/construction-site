@@ -48,10 +48,18 @@ nav {
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-links.active {
+    display: flex; /* Show when active */
 }
 
 nav a {
