@@ -33,12 +33,25 @@ header h1 {
     font-size: 1.5rem;
 }
 
-nav ul {
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-links {
     display: flex;
     list-style: none;
     padding: 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 0;
 }
 
 nav a {
@@ -88,12 +101,23 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
+    .nav-links {
+        display: none;
         flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        z-index: 1000;
     }
-    
-    nav li {
-        margin: 0.5rem 0;
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }
 
